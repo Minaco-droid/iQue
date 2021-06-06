@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400" prefWidth="600" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.ui.display.DisplayController">
+<AnchorPane prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.display.DisplayController">
    <children>
-      <JFXButton layoutX="443.0" layoutY="328.0" prefHeight="25.0" prefWidth="103.0" text="&gt;&gt;&gt;&gt;&gt;&gt;&gt;" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="443.0" AnchorPane.rightAnchor="54.0" AnchorPane.topAnchor="328.0" />
+      <JFXButton fx:id="proceedButton" layoutX="443.0" layoutY="328.0" onMouseClicked="#proceedButtonPressed" prefHeight="25.0" prefWidth="103.0" text="&gt;&gt;&gt;&gt;&gt;&gt;&gt;" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="443.0" AnchorPane.rightAnchor="54.0" AnchorPane.topAnchor="328.0" />
+      <Label alignment="CENTER" layoutX="286.0" layoutY="120.0" prefHeight="150.0" prefWidth="300.0" text="iQue" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font name="Century Schoolbook Bold Italic" size="120.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.loginPage.LoginPageController">
    <children>
       <StackPane>
          <children>
@@ -20,12 +20,12 @@
                      <children>
                          <HBox fx:id="hBox" alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="600.0" VBox.vgrow="NEVER">
                              <children>
-                                 <Label fx:id="minimizeLabel" alignment="CENTER" prefHeight="45.0" prefWidth="36.0" text="-">
+                                 <Label fx:id="minimizeLabel" onMouseClicked="#minimizeLabelPressed" alignment="CENTER" prefHeight="45.0" prefWidth="36.0" text="-">
                                      <font>
                                          <Font name="System Bold" size="30.0" />
                                      </font>
                                  </Label>
-                                 <Label fx:id="closeLabel" alignment="CENTER" prefHeight="45.0" prefWidth="40.0" text="X">
+                                 <Label fx:id="closeLabel" onMouseClicked="#closeLabelPressed" alignment="CENTER" prefHeight="45.0" prefWidth="40.0" text="X">
                                      <font>
                                          <Font name="System Bold" size="24.0" />
                                      </font>
@@ -56,7 +56,7 @@
                               <Insets bottom="20.0" left="120.0" right="120.0" top="5.0" />
                            </VBox.margin>
                         </JFXTextField>
-                        <JFXButton prefHeight="25.0" prefWidth="324.0" text="LOGIN">
+                        <JFXButton fx:id="loginButton" onMouseClicked="#openMainAppPage" prefHeight="25.0" prefWidth="324.0" text="LOGIN">
                            <VBox.margin>
                               <Insets bottom="-20.0" left="180.0" right="180.0" />
                            </VBox.margin>
@@ -64,7 +64,7 @@
                               <Font name="Century Schoolbook Bold" size="20.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton layoutX="130.0" layoutY="255.0" prefHeight="35.0" prefWidth="400.0" text="Click here to Sign Up">
+                        <JFXButton fx:id="createNewAccount" onMouseClicked="#openSignUpPage" layoutX="130.0" layoutY="255.0" prefHeight="35.0" prefWidth="400.0" text="Click here to Sign Up">
                            <VBox.margin>
                               <Insets bottom="20.0" left="120.0" right="120.0" top="60.0" />
                            </VBox.margin>
