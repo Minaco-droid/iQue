@@ -1,11 +1,15 @@
 package com.ui.signUpPage;
 
 import com.jfoenix.controls.JFXButton;
+import com.ui.utility.style.WindowStyle;
 import com.ui.utility.alert.AlertMaker;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
@@ -20,11 +24,23 @@ public class SignUpPageController implements Initializable {
     @FXML
     private StackPane rootPane;
     @FXML
-    private Label minimizeLabel, closeLabel;
+    private Label minimizeLabel, closeLabel, proceedButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+    }
+
+    @FXML
+    public void proceedButtonPressed() throws Exception {
+        Stage primaryStage = (Stage) proceedButton.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/com/ui/loginPage/login_page.fxml"));
+
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+//        runThread.stop();
+        WindowStyle.allowDrag(root, primaryStage);
+        primaryStage.show();
     }
 
     //    Method implementation abstracted using the RequestHandler Singleton class

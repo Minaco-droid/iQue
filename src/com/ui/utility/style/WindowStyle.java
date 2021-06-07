@@ -1,4 +1,4 @@
-package com.ui.utility;
+package com.ui.utility.style;
 
 
 import javafx.geometry.Rectangle2D;
@@ -40,7 +40,7 @@ public class WindowStyle {
         });
     }
 
-    //Sets the default stage prefered width and height.
+    //Sets the default stage preferred width and height.
     protected static void stageDimension(Double width, Double height) {
         pref_WH= new double[]{width, height};
     }

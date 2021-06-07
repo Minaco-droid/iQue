@@ -1,7 +1,7 @@
 package com.ui.loginPage;
 
 import com.jfoenix.controls.JFXButton;
-import com.ui.utility.WindowStyle;
+import com.ui.utility.style.WindowStyle;
 import com.ui.utility.alert.AlertMaker;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -39,7 +39,7 @@ public class LoginPageController implements Initializable {
     @FXML
     public void openMainAppPage() throws IOException {
         Stage primaryStage = (Stage) loginButton.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("com.ui.mainAppPage.mainApp_page.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/ui/mainAppPage/mainApp_page.fxml"));
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
@@ -50,7 +50,7 @@ public class LoginPageController implements Initializable {
     @FXML
     public void openSignUpPage() throws IOException {
         Stage primaryStage = (Stage) createNewAccount.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("com.ui.signUpPage.signUp_page.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/ui/signUpPage/signUp_page.fxml"));
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);

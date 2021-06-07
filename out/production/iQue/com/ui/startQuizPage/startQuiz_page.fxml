@@ -5,35 +5,41 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="243.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.startQuizPage.StartQuizPageController">
-    <HBox layoutY="6.0" prefHeight="113.0" prefWidth="600.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <children>
-            <Label fx:id="minimizeLabel" alignment="CENTER" prefHeight="45.0" prefWidth="36.0" text="-">
-                <font>
-                    <Font name="System Bold" size="30.0" />
-                </font>
-                <HBox.margin>
-                    <Insets left="528.0" />
-                </HBox.margin>
-            </Label>
-            <Label fx:id="closeLabel" alignment="CENTER" prefHeight="45.0" prefWidth="36.0" text="X">
-                <font>
-                    <Font name="System Bold" size="24.0" />
-                </font>
-            </Label>
-        </children>
-    </HBox>
-   <Label alignment="CENTER" layoutX="150.0" layoutY="94.0" prefHeight="60.0" prefWidth="300.0" text="Quiz Title" textAlignment="CENTER" AnchorPane.bottomAnchor="295.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="94.0">
-      <font>
-         <Font name="Imprint MT Shadow" size="30.0" />
-      </font>
-   </Label>
-   <Label alignment="CENTER" layoutX="59.0" layoutY="156.0" prefHeight="170.0" prefWidth="450.0" text="This quiz has a total of 50 questions. Duration of 30 minutes." textAlignment="CENTER" underline="true" wrapText="true" AnchorPane.bottomAnchor="119.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="156.0" />
-   <JFXButton layoutX="154.0" layoutY="352.0" prefHeight="50.0" prefWidth="300.0" text="START QUIZ" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="340.0">
-      <font>
-         <Font name="High Tower Text" size="36.0" />
-      </font>
-   </JFXButton>
-</AnchorPane>
+
+<StackPane fx:id="rootPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.startQuizPage.StartQuizPageController">
+   <children>
+      <AnchorPane prefHeight="243.0" prefWidth="600.0">
+          <HBox layoutY="6.0" prefHeight="113.0" prefWidth="600.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <children>
+                  <Label fx:id="minimizeLabel" onMouseClicked="#minimizeLabelPressed" alignment="CENTER" prefHeight="45.0" prefWidth="36.0" text="-">
+                      <font>
+                          <Font name="System Bold" size="30.0" />
+                      </font>
+                      <HBox.margin>
+                          <Insets left="528.0" />
+                      </HBox.margin>
+                  </Label>
+                  <Label fx:id="closeLabel" onMouseClicked="#closeLabelPressed" alignment="CENTER" prefHeight="45.0" prefWidth="36.0" text="X">
+                      <font>
+                          <Font name="System Bold" size="24.0" />
+                      </font>
+                  </Label>
+              </children>
+          </HBox>
+         <Label alignment="CENTER" layoutX="150.0" layoutY="94.0" prefHeight="60.0" prefWidth="300.0" text="Quiz Title" textAlignment="CENTER" AnchorPane.bottomAnchor="295.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="94.0">
+            <font>
+               <Font name="Imprint MT Shadow" size="30.0" />
+            </font>
+         </Label>
+         <Label alignment="CENTER" layoutX="59.0" layoutY="156.0" prefHeight="170.0" prefWidth="450.0" text="This quiz has a total of 50 questions. Duration of 30 minutes." textAlignment="CENTER" underline="true" wrapText="true" AnchorPane.bottomAnchor="119.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="156.0" />
+         <JFXButton fx:id="startQuiz" layoutX="154.0" layoutY="352.0" onMouseClicked="#setStartQuiz" prefHeight="50.0" prefWidth="300.0" text="START QUIZ" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="340.0">
+            <font>
+               <Font name="High Tower Text" size="36.0" />
+            </font>
+         </JFXButton>
+      </AnchorPane>
+   </children>
+</StackPane>

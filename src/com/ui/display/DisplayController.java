@@ -1,7 +1,7 @@
 package com.ui.display;
 
 import com.jfoenix.controls.JFXButton;
-import com.ui.utility.WindowStyle;
+import com.ui.utility.style.WindowStyle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -31,7 +31,7 @@ public class DisplayController implements Initializable {
     @FXML
     public void proceedButtonPressed() throws Exception {
         Stage primaryStage = (Stage) proceedButton.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("C:\\Users\\LENOVO L560\\Desktop\\iQue\\src\\com\\ui\\loginPage\\login_page.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/ui/loginPage/login_page.fxml"));
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
@@ -51,12 +51,12 @@ public class DisplayController implements Initializable {
             interval = sleepInterval;
         }
 
-        public void start(){
+        public void start() {
             thread = new Thread(this);
             thread.start();
         }
 
-        public void stop(){
+        public void stop() {
             threadInterrupted.set(false);
             thread.interrupt();
         }
